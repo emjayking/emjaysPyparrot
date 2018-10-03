@@ -27,17 +27,4 @@ print("ready for take-off!")
 mambo.turn_on_auto_takeoff()
 mambo.hover()
 mambo.smart_sleep(2)
-
-for i in range(500):
-    try:
-        if keyboard.is_pressed('l'):
-            print("initiating landing sequence")
-            mambo.safe_land(2)
-            break
-        else:
-            pass
-    except:
-        break
-    print("exiting loop")
-
 mambo.safe_land(2)
