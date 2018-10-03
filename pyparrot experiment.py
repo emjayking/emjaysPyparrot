@@ -8,6 +8,7 @@
 #27/09/18
 # the plan is to try and find a way to use the pyparrot respository in my code.
 from pyparrot.Minidrone import Mambo
+import keyboard
 
 mamboAddr = "e0:14:bc:c5:3d:cb"
  #3/10/2018 success today managed to connect and run the demo scripts.
@@ -24,6 +25,19 @@ mambo.smart_sleep(2)
 
 print("ready for take-off!")
 mambo.turn_on_auto_takeoff()
-
+mambo.hover()
 mambo.smart_sleep(2)
+
+for i in range(500):
+    try:
+        if keyboard.is_pressed('l'):
+            print("initiating landing sequence")
+            mambo.safe_land(2)
+            break
+        else:
+            pass
+    except:
+        break
+    print("exiting loop")
+    
 mambo.safe_land(2)
