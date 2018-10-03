@@ -19,7 +19,7 @@ success = mambo.connect(num_retries=3)
 print("connected: %s" % success)
 
 print("sleeping")
-mambo.smart_sleep()
+mambo.smart_sleep(2)
 mambo.ask_for_state_update()
 mambo.smart_sleep(2)
 
@@ -39,5 +39,5 @@ for i in range(500):
     except:
         break
     print("exiting loop")
-    
+
 mambo.safe_land(2)
