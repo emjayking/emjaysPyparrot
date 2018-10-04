@@ -18,7 +18,7 @@ print("trying to connect")
 success = mambo.connect(num_retries=3)
 print("connected: %s" % success)
 
-    if (success):
+if (success):
     print("sleeping")
     mambo.smart_sleep(2)
     mambo.ask_for_state_update()
