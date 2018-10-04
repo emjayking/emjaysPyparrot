@@ -19,10 +19,11 @@ if (success):
     mambo.turn_on_auto_takeoff()
     mambo.hover()
     mambo.smart_sleep(15)
+    while True:
+        if mambo.sensors.flying_state is  "hovering":
 
-    print("landing!")
-    mambo.safe_land(5)
-    mambo.sleep(5)
-
-mambo.safe_land(5)
-mambo.disconnect()
+            print("landing!")
+            mambo.safe_land(5)
+            mambo.sleep(5)
+            break
+            mambo.disconnect()
