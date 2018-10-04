@@ -22,7 +22,6 @@ print("sleeping")
 mambo.smart_sleep(2)
 mambo.ask_for_state_update()
 mambo.smart_sleep(2)
-print(mambo.battery())
 
 print("ready for take-off!")
 mambo.turn_on_auto_takeoff()
