@@ -18,7 +18,7 @@ if (success):
 
     print("taking off")
     mambo.safe_takeoff(5)
-    mambo.sleep(5)
+    mambo.smart_sleep(5)
 
     print("hovering")
     mambo.hover()
