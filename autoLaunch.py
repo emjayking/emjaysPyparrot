@@ -24,6 +24,6 @@ if (success):
 
             print("landing!")
             mambo.safe_land(5)
-            mambo.sleep(5)
+            mambo.smart_sleep(5)
             break
             mambo.disconnect()
