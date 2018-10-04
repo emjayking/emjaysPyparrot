@@ -20,4 +20,9 @@ if (success):
     mambo.hover()
     mambo.smart_sleep(15)
 
+    print("landing!")
+    mambo.safe_land(5)
+    mambo.sleep(5)
+
+mambo.safe_land(5)
 mambo.disconnect()
