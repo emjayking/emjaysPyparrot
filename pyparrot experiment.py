@@ -24,7 +24,7 @@ mambo.ask_for_state_update()
 mambo.smart_sleep(2)
 
 print("ready for take-off!")
-mambo.turn_on_auto_takeoff()
+mambo.smart_takeoff()
 mambo.smart_sleep(2)
 print("hovering")
 mambo.hover()
@@ -35,6 +35,7 @@ try:
 except:
     print("battery failed")
 print("landing?")
+
 mambo.safe_land(5)
 mambo.smart_sleep(5)
 
