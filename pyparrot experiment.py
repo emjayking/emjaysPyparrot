@@ -18,30 +18,33 @@ print("trying to connect")
 success = mambo.connect(num_retries=3)
 print("connected: %s" % success)
 
-print("sleeping")
-mambo.smart_sleep(2)
-mambo.ask_for_state_update()
-mambo.smart_sleep(2)
+    if (success):
+    print("sleeping")
+    mambo.smart_sleep(2)
+    mambo.ask_for_state_update()
+    mambo.smart_sleep(2)
 
-print("ready for take-off!")
-# mambo.safe_takeoff(5)
-mambo.turn_on_auto_takeoff()
-mambo.smart_sleep(15)
-print("hovering")
-mambo.hover()
-mambo.smart_sleep(2)
+    print("ready for take-off!")
+    # mambo.safe_takeoff(5)
+    mambo.turn_on_auto_takeoff()
+    mambo.smart_sleep(15)
+    print("hovering")
+    mambo.hover()
+    mambo.smart_sleep(2)
 
-# try:
-#    battery = mambo.sensors.battery()
-#    print("battery %s" % battery)
-# except:
-#    print("battery failed")
+    # try:
+    #    battery = mambo.sensors.battery()
+    #    print("battery %s" % battery)
+    # except:
+    #    print("battery failed")
 
 
-print("landing?")
+    print("landing?")
 
-mambo.safe_land(5)
-mambo.smart_sleep(5)
+    mambo.safe_land(5)
+    mambo.smart_sleep(5)
 
-print("disconnecting")
-mambo.disconnect()
+    print("disconnecting")
+    mambo.disconnect()
+else:
+    print("failed")
