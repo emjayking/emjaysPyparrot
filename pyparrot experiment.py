@@ -27,7 +27,7 @@ print("ready for take-off!")
 # mambo.safe_takeoff(5)
 mambo.turn_on_auto_takeoff()
 print("hovering")
-# mambo.hover()
+mambo.hover()
 mambo.smart_sleep(2)
 
 try:
