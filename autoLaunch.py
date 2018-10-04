@@ -17,6 +17,7 @@ if (success):
 
     print("ready for takeoff!")
     mambo.turn_on_auto_takeoff()
+    mambo.hover()
     mambo.smart_sleep(15)
 
 mambo.disconnect()
