@@ -8,7 +8,6 @@
 #27/09/18
 # the plan is to try and find a way to use the pyparrot respository in my code.
 from pyparrot.Minidrone import Mambo
-import keyboard
 
 mamboAddr = "e0:14:bc:c5:3d:cb"
  #3/10/2018 success today managed to connect and run the demo scripts.
