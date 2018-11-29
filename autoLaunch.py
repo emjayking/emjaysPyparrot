@@ -36,30 +36,7 @@ if (success):
             mambo.smart_sleep(2)
             mambo.turn_degrees(180)
 
-            print("flying 'yaw'")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=0, pitch=0, yaw=50, vertical_movement=0, duration=1)
-
-            print("flying negative yaw")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=0, pitch=0, yaw=-50, vertical_movement=0, duration=1)
-
-            print("flying roll")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=50, pitch=0, yaw=0, vertical_movement=0, duration=1)
-
-            print("flying negative roll")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=-50, pitch=0, yaw=0, vertical_movement=0, duration=1)
-
-            print("goin up!")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=50, duration=1)
-
-            print("goin down")
-            mambo.smart_sleep(2)
-            mambo.fly_direct(roll=0, pitch=0, yaw=0, vertical_movement=-50, duration=1)
-
+    
             print("landing")
             mambo.safe_land(5)
             mambo.smart_sleep(5)
