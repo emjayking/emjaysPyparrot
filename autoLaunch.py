@@ -26,11 +26,11 @@ if (success):
         if mambo.sensors.flying_state !=  "landed":
             print("flying forward")
             mambo.smart_sleep(3)
-            mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=0, duration=1)
+            mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=0, duration=0.5)
 
             print("flying backwards")
             mambo.smart_sleep(2)
-            mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=0, duration=1)
+            mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=0, duration=0.5)
 
             print("turning 360")
             mambo.smart_sleep(2)
