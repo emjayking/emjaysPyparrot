@@ -19,7 +19,9 @@ if (success):
     mambo.turn_on_auto_takeoff()
     print(mambo.sensors.flying_state)
     mambo.smart_sleep(10)
+    i = 0
     while True:
+        i +=1
         print(mambo.sensors.flying_state)
         if mambo.sensors.flying_state !=  "landed":
             print("flying forward")
@@ -36,10 +38,16 @@ if (success):
             mambo.smart_sleep(2)
             mambo.turn_degrees(180)
 
-    
+
             print("landing")
             mambo.safe_land(5)
             mambo.smart_sleep(5)
 
             print("disconnect")
+            mambo.disconnect()
+        elif i >= 500:
+            print("TIMEOUT ERROR")
+            mambo.safe_land(5)
+            mambo.smart_sleep(5)
+
             mambo.disconnect()
